@@ -31,56 +31,20 @@ Add it to your `INSTALLED_APPS`:
 
     INSTALLED_APPS = (
         ...
-        'django_skins.apps.DjangoSkinsConfig',
+        'django_skins',
         ...
     )
 
-Add Django Skins's URL patterns:
+Add django_skins.context_processors.template to context_processors:
 
 .. code-block:: python
 
-    from django_skins import urls as django_skins_urls
-
-
-    urlpatterns = [
-        ...
-        url(r'^', include(django_skins_urls)),
-        ...
+    TEMPLATES = [
+            ...
+            'OPTIONS': {
+                'context_processors': [
+                    ...
+                    'django_skins.context_processors.template',
+                ],
+            ...
     ]
-
-Features
---------
-
-* TODO
-
-Running Tests
--------------
-
-Does the code actually work?
-
-::
-
-    source <YOURVIRTUALENV>/bin/activate
-    (myenv) $ pip install tox
-    (myenv) $ tox
-
-
-Development commands
----------------------
-
-::
-
-    pip install -r requirements_dev.txt
-    invoke -l
-
-
-Credits
--------
-
-Tools used in rendering this package:
-
-*  Cookiecutter_
-*  `cookiecutter-djangopackage`_
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage

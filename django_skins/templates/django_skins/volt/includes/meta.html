@@ -1,0 +1,29 @@
+{% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="title" content="{{site_meta.title}}">
+<meta name="author" content="{{site_meta.author}}">
+<meta name="description" content="{{site_meta.description}}">
+<meta name="keywords" content="{{site_meta.keywords}}" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{facebook_meta.url}}">
+<meta property="og:title" content="{{facebook_meta.title}}">
+<meta property="og:description" content="{{facebook_meta.description}}">
+<meta property="og:image" content="{{facebook_meta.image}}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{twitter_meta.url}}">
+<meta property="twitter:title" content="{{twitter_meta.title}}">
+<meta property="twitter:description" content="{{twitter_meta.description}}">
+<meta property="twitter:image" content="{{twitter_meta.image}}">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="120x120" href="{% static 'volt/img/favicon/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'volt/img/favicon/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'volt/img/favicon/favicon-16x16.png' %}">
+<link rel="manifest" href="{% static 'volt/img/favicon/site.webmanifest' %}">
+<link rel="mask-icon" href="{% static 'volt/img/favicon/safari-pinned-tab.svg' %}" color="#ffffff">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">

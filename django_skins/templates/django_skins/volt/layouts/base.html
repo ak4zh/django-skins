@@ -1,0 +1,76 @@
+<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
+* Copyright 2020 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Primary Meta Tags -->
+
+<title>
+    {% block title %}{% endblock %} | Dashboard
+</title>
+
+{% include 'django_skins/volt/includes/meta.html' %}
+
+<!-- Fontawesome -->
+<link type="text/css" href="{% static 'volt/vendor/@fortawesome/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+
+<!-- Sweet Alert -->
+<link type="text/css" href="{% static 'volt/vendor/sweetalert2/dist/sweetalert2.min.css' %}" rel="stylesheet">
+
+<!-- Notyf -->
+<link type="text/css" href="{% static 'volt/vendor/notyf/notyf.min.css' %}" rel="stylesheet">
+
+<!-- Volt CSS -->
+<link type="text/css" href="{% static 'volt/css/volt.css' %}" rel="stylesheet">
+
+</head>
+<body>
+
+  <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-md-none">
+      <a class="navbar-brand me-lg-5" href="/">
+          <img class="navbar-brand-dark" src="{% static 'volt/img/brand/light.svg' %}" alt="{{site_name}} logo" /> <img class="navbar-brand-light" src="{% static 'volt/img/brand/dark.svg' %}" alt="{{site_name}} logo" />
+      </a>
+      <div class="d-flex align-items-center">
+          <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
+  </nav>
+
+  {% include 'django_skins/volt/includes/sidebar.html' %} 
+    
+  <main class="content">
+
+    {% include 'django_skins/volt/includes/navigation.html' %}
+
+    {% block content %}{% endblock content %}
+
+    {% include 'django_skins/volt/includes/settings-box.html' %}
+
+    {% include 'django_skins/volt/includes/footer.html' %}
+
+  </main>
+
+  {% include 'django_skins/volt/includes/scripts.html' %}
+
+</body>
+</html>
