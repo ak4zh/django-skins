@@ -1,4 +1,4 @@
-{% extends "django_skins/volt/layouts/base-fullscreen.html" %}
+{% extends "layouts/base-fullscreen.html" %}
 {% load static %}
 
 {% block title %} Sign Up {% endblock %} 
@@ -16,7 +16,8 @@
                         <div class="mb-4 mb-lg-0 bg-white shadow-soft border rounded border-light p-4 p-lg-5 w-100 fmxw-500">
                             <div class="text-center text-md-center mb-4 mt-md-0">
                                 <h1 class="mb-0 h3">
-                                    {{site_name|title}} - Sign IN
+                                    <a target="_blank"
+                                       href="https://appseed.us/admin-dashboards/django-dashboard-volt">Django Volt</a> - Sign IN
                                 </h1>
                                 <br />
                                 <p>
@@ -86,7 +87,7 @@
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <a href="{% url login_view %}" class="small text-right">Login</a>
+                                            <a href="{% url 'account_login' %}" class="small text-right">Login</a>
                                         </div>
                                     </div>                                  
                                 </div>
@@ -96,6 +97,10 @@
                             </form>
 
                             <div class="d-flex justify-content-center align-items-center mt-4">
+                                <span class="font-weight-normal">
+                                    &copy; <a  href="https://themesberg.com" target="_blank">Themesberg</a> 
+                                    - coded by <a target="_blank" href="https://appseed.us">AppSeed</a>
+                                </span>
                             </div>
 
                         </div>

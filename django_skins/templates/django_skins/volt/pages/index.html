@@ -1,50 +1,7 @@
-<!--
-
-=========================================================
-* Volt Free - Bootstrap 5 Dashboard
-=========================================================
-
-* Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
-* Copyright 2020 Themesberg (https://www.themesberg.com)
-
-* Designed and coded by https://themesberg.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal. Contact us if you want to remove it.
-
--->
+{% extends 'volt/layouts/base-fullscreen.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head> 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<!-- Primary Meta Tags -->
-<title>
-    {% block title %} {% endblock %}
-</title>
-
-{% include 'django_skins/volt/includes/meta.html' %}
-
-<!-- Fontawesome -->
-<link type="text/css" href="{% static 'volt/vendor/@fortawesome/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
-
-<!-- Sweet Alert -->
-<link type="text/css" href="{% static 'volt/vendor/sweetalert2/dist/sweetalert2.min.css' %}" rel="stylesheet">
-
-<!-- Notyf -->
-<link type="text/css" href="{% static 'volt/vendor/notyf/notyf.min.css' %}" rel="stylesheet">
-
-<!-- Volt CSS -->
-<link type="text/css" href="{% static 'volt/css/volt.css' %}" rel="stylesheet">
-
-<!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
-
-</head>
-<body>
+{% block content %}
 
     <header class="header-global">
         <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary pt-4 navbar-dark">
@@ -67,7 +24,7 @@
                             <a href="/dashboard.html" class="nav-link">Dashboard</a>
                         </li>
                         <li class="nav-item me-2">
-                            <a href="{% url logout_view %}" class="nav-link">Logout</a>
+                            <a href="{% url 'account_logout' %}" class="nav-link">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -675,14 +632,11 @@
                     </a>
                 <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
                     <p class="font-weight-normal font-small mb-0">
-                        &copy; {{site_name|title}}.</p>
+                        &copy; Themesberg 2019-<span class="current-year">2020</span> - coded by <a target="_blank" href="https://appseed.us">AppSeed</a>.</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    {% include 'django_skins/volt/includes/scripts.html' %}
-
-</body>
-</html>
+{% endblock content %}

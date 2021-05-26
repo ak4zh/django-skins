@@ -1,3 +1,4 @@
+{% load static %}
 <!--
 
 =========================================================
@@ -6,48 +7,24 @@
 
 * Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
 * Copyright 2020 Themesberg (https://www.themesberg.com)
-* License (https://themesberg.com/licensing)
 
 * Designed and coded by https://themesberg.com
 
 =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal. Contact us if you want to remove it.
 
 -->
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- Primary Meta Tags -->
+{% include 'volt/includes/head.html' %}
 
-<title>
-    {% block title %}{% endblock %}
-</title>
-
-{% include 'django_skins/volt/includes/meta.html' %}
-
-<!-- Fontawesome -->
-<link type="text/css" href="{% static 'volt/vendor/@fortawesome/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
-
-<!-- Sweet Alert -->
-<link type="text/css" href="{% static 'volt/vendor/sweetalert2/dist/sweetalert2.min.css' %}" rel="stylesheet">
-
-<!-- Notyf -->
-<link type="text/css" href="{% static 'volt/vendor/notyf/notyf.min.css' %}" rel="stylesheet">
-
-<!-- Volt CSS -->
-<link type="text/css" href="{% static 'volt/css/volt.css' %}" rel="stylesheet">
-
-</head>
 <body>
 
     {% block content %}{% endblock content %}
 
-    {% include 'django_skins/volt/includes/scripts.html' %}
+    {% include 'volt/includes/scripts.html' %}
 
 </body>
 </html>
